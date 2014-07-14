@@ -1,0 +1,154 @@
+{
+    "text": "ROOT",
+    "expanded": true,
+    "children": [
+        {
+            "text": "Team.Bayern",
+            "expanded": true,
+            "children": [
+                {
+                    "first_name": "Manuel",
+                    "last_name": "Neuer",
+                    "email": "Neuer@gmail.com",
+                    "phone_number": "89119119191",
+		    "leaf": true
+                },
+                {
+                    "first_name": "Thomas",
+                    "last_name": "Müller",
+                    "email": "Müller@gmail.com",
+                    "phone_number": "89119114191",
+		    "leaf": true
+                },
+                {
+                    "first_name": "Robert",
+                    "last_name": "Lewandowski",
+                    "email": "Lewandowski@gmail.com",
+                    "phone_number": "89119549191",
+		    "leaf": true
+                },
+                {
+                    "first_name": "Arjen",
+                    "last_name": "Robben",
+                    "email": "Robben@gmail.com",
+                    "phone_number": "89117889191",
+		    "leaf": true
+                },
+                {
+                    "first_name": "Claudio",
+                    "last_name": "Pizarro",
+                    "email": "Pizarro@gmail.com",
+                    "phone_number": "89119114491",
+		    "leaf": true
+                },
+                {
+                    "first_name": "Jérôme",
+                    "last_name": "Boateng",
+                    "email": "Boateng@gmail.com",
+                    "phone_number": "89119490191",
+		    "leaf": true
+                }
+            ]
+        },
+        {
+            "text": "Team.Barcelona",
+            "expanded": true,
+            "children": [
+                {
+                    "first_name": "Dani",
+                    "last_name": "Alves",
+                    "email": "Alves@gmail.com",
+                    "phone_number": "89178899191",
+		    "leaf": true
+                },
+                {
+                    "first_name": "Jordi",
+                    "last_name": "Jordi",
+                    "email": "Jordi@gmail.com",
+                    "phone_number": "89119100991",
+		    "leaf": true
+                },
+                {
+                    "first_name": "Bojan",
+                    "last_name": "Krkić",
+                    "email": "Krkić@gmail.com",
+                    "phone_number": "89118999191",
+		    "leaf": true
+                },
+                {
+                    "first_name": "Andrés",
+                    "last_name": "Iniesta",
+                    "email": "Iniesta@gmail.com",
+                    "phone_number": "89117778191",
+		    "leaf": true
+                },
+                {
+                    "first_name": "Lionel",
+                    "last_name": "Messi",
+                    "email": "Messi@gmail.com",
+                    "phone_number": "89118814491",
+		    "leaf": true
+                },
+                {
+                    "first_name": "Luis",
+                    "last_name": "Suárez",
+                    "email": "Suárez@gmail.com",
+                    "phone_number": "89119456691",
+		    "leaf": true
+                }
+            ]
+        },
+
+        {
+            "text": "Team.Real Madrid",
+            "expanded": true,
+            "children": [
+                {
+                    "first_name": "Iker",
+                    "last_name": "Casillas",
+                    "email": "Casillas@gmail.com",
+                    "phone_number": "89119100191",
+		    "leaf": true
+                },
+                {
+                    "first_name": "Sergio",
+                    "last_name": "Ramos",
+                    "email": "Ramos@gmail.com",
+                    "phone_number": "89566114191",
+		    "leaf": true
+                },
+                {
+                    "first_name": "Sami",
+                    "last_name": "Khedira",
+                    "email": "Khedira@gmail.com",
+                    "phone_number": "89118849191",
+		    "leaf": true
+                },
+
+{
+                    "first_name": "Daniel",
+                    "last_name": "Carvajal",
+                    "email": "Carvajal@gmail.com",
+                    "phone_number": "89113389191",
+		    "leaf": true
+                },
+                {
+                    "first_name": "Álvaro",
+                    "last_name": "Morata",
+                    "email": "Morata@gmail.com",
+                    "phone_number": "89165414491",
+		    "leaf": true
+                },
+                {
+                    "first_name": "Asier",
+                    "last_name": "Illarramendi",
+                    "email": "Illarramendi@gmail.com",
+                    "phone_number": "89454490191",
+		    "leaf": true
+                }
+            ]
+        }
+
+
+    ]
+}

@@ -1,0 +1,75 @@
+SpringBoot CloudBees Sample
+===========================
+
+image:doc/img/springboot-icon.png[Spring Boot, 50, 50, link="http://projects.spring.io/spring-boot"] image:https://jenkins-ci.org/sites/default/files/images/CloudBees-logo.thumbnail.png[CloudBees, link="http://www.cloudbees.com/"]
+
+This sample project demonstrates how to build and deploy a http://projects.spring.io/spring-boot/[Spring Boot] application to http://www.cloudbees.com/[CloudBees].  It's based upon the sample application in the Spring Boot http://spring.io/guides/gs/spring-boot/[Getting Started Guide] but includes several changes to allow easy deployment to CloudBees.  It uses the https://github.com/spring-projects/spring-boot/tree/master/spring-boot-tools/spring-boot-gradle-plugin[Spring Boot Gradle Plugin] to build an "executable" WAR file that can be deployed to the CloudBees http://wiki.cloudbees.com/bin/view/RUN/Java+Container[JVM Runtime Container].
+
+== Changes for CloudBees
+
+. A +ServerProperties+ bean is created to set the Servlet container port to +System.getProperty("app.port")+
+. The +build.gradle+ file is configured for deployment to CloudBees using a new version (0.1.1) of the https://github.com/CloudBees-community/gradle-cloudbees-plugin[Gradle CloudBees Plugin]
+
+Note:: https://bintray.com/msgilligan/maven/gradle-cloudbees-plugin/0.1.1[Version 0.1.1] of the gradle-cloudbees-plugin is not an official release from CloudBees, and is being pulled from the https://bintray.com/msgilligan/maven[msgilligan/maven] repo on Bintray. +build.gradle+ for this project is configured accordingly.
+
+== Run Unit and Integration Tests
+
+    ./gradlew test
+
+== Running Locally
+
+To run the sample app locally:
+
+    ./gradlew bootRun
+
+The app will be built and running locally at http://localhost:8080/
+
+== Deploying to CloudBees
+
+To deploy to CloudBees:
+
+. Edit +build.gradle+ and set your CloudBees +appId+
+. Make sure your https://github.com/bmuschko/gradle-cloudbees-plugin#setting-api-credentials[CloudBees API Credentials are setup]
+. Run the following command:
+
+    ./gradlew cloudBeesAppDeployArchive
+
+The app will be built as a http://projects.spring.io/spring-boot/docs/spring-boot-tools/spring-boot-loader/README.html[Spring Boot WAR] and deployed to CloudBees.
+
+Note::
+Although the app is built as a WAR, it is actually deplyed to CloudBees as a JAR file.  Since CloudBees is running the Spring Boot +WarLauncher+ class it doesn't really notice that the JAR is actually a WAR.
+
+== Live Demo
+
+Not very exciting, but the app is running at http://springboot-sample.community.cloudbees.net[springboot-sample.community.cloudbees.net] (a CloudBees free instance, so give it a minute to start up)
+
+== Not currently implemented/demonstrated
+
+Spring Boot supports a variety of build/deployment options that can conceivably be used with CloudBees. We'll look at each of these options in terms of usefulness and implementation in each subsection.
+
+=== Deploying as a WAR
+
+For completeness it would be nice to also be able to deploy the WAR to CloudBees using one of the built-in servlet containers (e.g. +tomcat+, +jboss+, etc.). I don't think trying/doing this should be too hard.  It might be nice to use Spring Boot WAR during development, but deploy a traditional war in production. _Contributions welcome_.
+
+=== Deploying as a ZIP
+
+The app could also be deployed to CloudBees as a zipfile containg the simple app JAR and all the dependency jars. This is supported by the modified Gradle CloudBees Plugin but needs minor changes to +build.gradle+ to correctly create the zipfile and matching +classpath+ parameter.  I'm not sure if there is any benefit to this approach.
+
+=== Building a Spring Boot JAR
+
+If you want to experiment with the executable JAR format of Spring Boot (to compare with the WAR format) you can still build a JAR as follows:
+
+    gradle jar assemble
+
+The +assemble+ task will run the +repackage+ task of the +spring-boot+ plugin which will convert the +hello+ JAR file along with the +hello+ WAR file if both are present.  I don't know of any tangible benefit that a JAR offers over a WAR. If you have, please let me now.
+
+== TODO
+
+* Release Gradle CloudBees Plugin on Maven Central (See https://github.com/CloudBees-community/gradle-cloudbees-plugin/issues/3[Plugin Issue 3])
+* Support for CloudBees load-balancing.
+
+
+
+
+
+    

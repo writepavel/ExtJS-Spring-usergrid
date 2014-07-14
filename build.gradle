@@ -1,0 +1,73 @@
+buildscript {
+    ext {
+        springBootVersion = '1.0.0.RELEASE'
+    }
+    repositories {
+        maven { url 'http://dl.bintray.com/msgilligan/maven' }
+        maven { url 'http://jcenter.bintray.com' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath 'org.gradle.api.plugins:gradle-cloudbees-plugin:0.1.1'
+    }
+}
+
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin: 'war'
+apply plugin: 'spring-boot'
+apply plugin: 'cloudbees'
+
+archivesBaseName = 'usergrid'
+version =  '0.1.1'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'http://repo.spring.io/milestone'
+    }
+    maven {
+        url 'http://oss.sonatype.org/content/groups/public/'
+    }
+}
+
+dependencies {
+    compile "org.springframework.boot:spring-boot-starter-web"
+    testCompile "org.codehaus.groovy:groovy-all:2.2.1"
+    testCompile "org.spockframework:spock-core:0.7-groovy-2.0"
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+    compile "org.yaml:snakeyaml:1.14-SNAPSHOT"
+    compile "org.codehaus.jackson:jackson-mapper-asl:1.9.13"
+    compile "com.googlecode.json-simple:json-simple:1.1"
+}
+
+springBoot {
+    mainClass = "com.writepavel.usergrid.Application"
+    backupSource = true
+}
+
+def springBootWarLauncherClassName = "org.springframework.boot.loader.WarLauncher"
+
+// Make the deploy target easier to find/type
+task deploy(dependsOn: cloudBeesAppDeployArchive)
+
+cloudBees {
+    apiKey = '7CF817B4F64ED7F1'
+    apiSecret = 'SOUAHVM2CKEDZALCP5WEEGMVMC8LQCG7VA8UEPFGH3E='
+    appId = 'writepavel/usergrid'
+    archiveType = 'jar'
+    archiveFile = war.archivePath
+    deltaDeploy = true
+    parameters = [containerType: "java", 'runtime.class': springBootWarLauncherClassName]
+}
+
+cloudBeesAppDeployArchive.dependsOn assemble
+cloudBeesAppDeployArchive.message = project.version
+
+tasks.withType(JavaCompile) {
+    options.fork = true
+    options.forkOptions.executable = "C:\\Program Files\\Java\\jdk1.7.0_60\\bin\\javac"
+}
+
+
