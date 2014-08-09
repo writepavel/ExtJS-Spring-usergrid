@@ -1,0 +1,66 @@
+List of Users:
+
+Tomas.Andersen. email: tom@andersen.com, phone number: +79214344562
+
+Group of users: "Team.Musicians"
+
+ - Amadeus.Mozart. email: amadeus@mozart.com, phone number: +79112007763
+ - John.Bach. email: john@bach.com, phone number: +79112037763
+ - Sergey.Rachmaninov. email: sergey@rachmaninov.com, phone number: 89112007763
+ - Ludvig.Beethoven. email: ludvig@beethoven.com, phone number: +7-911-200-7763
+ - Ferents.Lizst. email: ferents@lizst.com, phone number: +7-911-8007763
+
+Group of users: "Team.Bayern"
+
+ - Manuel.Neuer. email: Neuer@gmail.com, phone number: 89119119191
+ - Claudio.Pizarro. email: Pizarro@gmail.com, phone number: 89119114191
+ - Robert.Lewandowski. email: Lewandowski@gmail.com, phone number: +79119549191
+ - Arjen.Robben. email: Robben@gmail.com, phone number: +79112007763
+ - Amadeussds.Mozartwwddd. email: amadeus@mozart.com, phone number: +89117889191
+
+Group of users: "Team.Barcelona"
+
+ - Dani.Alves. email: Alves@gmail.com, phone number: +79178899191
+ - Lionel.Messi. email: Messi@gmail.com, phone number: +79118814491
+ - Luis.Suarez. email: Suarez@gmail.com, phone number: +79119456691
+ - Andres.Iniesta. email: Iniesta@gmail.com, phone number: +79117778191
+ - Bojan.Krkic. email: Krkic@gmail.com, phone number: 89118999191
+
+Group of users: "Team.RealMadrid"
+
+ - Iker.Casillas. email: Casillas@gmail.com, phone number: +79119100191
+ - Sergio.Ramos. email: Ramos@gmail.com, phone number: 89566114191
+ - Sami.Khedira. email: Khedira@gmail.com, phone number: +7-911-8849191
+ - Daniel.Carvajal. email: Carvajal@gmail.com, phone number: 89113389191
+ - Asier.Illarramendi. email: Illarramendi@gmail.com, phone number: +79454490191
+
+Group of users: "Mult.NuPogodi"
+
+ - zayats.zayats. email: zayats@gmail.com, phone number: +7-9112007763
+ - volk.volk. email: volk@gmail.com, phone number: +7-911-1007763
+
+Group of users: "Mult.DyadyaFedor"
+
+ - pes.sharik. email: pes@sharik.com, phone number: +7911-2007763
+ - kot.matroskin. email: kot@matroskin.com, phone number: +7-4112007763
+ - fedor.dyadya. email: fedor@gmail.com, phone number: +79112007763
+ - pochtalion.pechkin. email: pechkin@gmail.com, phone number: +79112007763
+
+Group of users: "Mult.Karlson"
+
+ - malish.melkiy. email: malish@gmail.com, phone number: +79112007763
+ - karl.son. email: karlson@gmail.com, phone number: +79112007763
+
+Group of users: "Mult.Cheburashka"
+
+ - krokodil.gena. email: gena@gmail.com, phone number: +7-911-333-7763
+ - cheburashka.cheb. email: cheburashka@yandex.ru, phone number: +7-4114007763
+ - staruha.shapoklyack. email: shapoklyack@mozart.com, phone number: +7-9112007763
+
+Group of users: "Mult.Buratino"
+
+ - bura.tino. email: buratino@gmail.com, phone number: +7-911-2007763
+ - karabas.barabas. email: barabas@yandex.ru, phone number: 89112007763
+ - alisa.lisa. email: alisa@bura.com, phone number: +7-9112007763
+ - bazilio.kot. email: bazilio@gmail.com, phone number: +7-911-2007763
+ - papa.karlo. email: karlo@gmail.com, phone number: +7-9212007763

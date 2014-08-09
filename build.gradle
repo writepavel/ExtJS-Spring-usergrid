@@ -40,6 +40,29 @@ dependencies {
     compile "org.yaml:snakeyaml:1.14-SNAPSHOT"
     compile "org.codehaus.jackson:jackson-mapper-asl:1.9.13"
     compile "com.googlecode.json-simple:json-simple:1.1"
+    //compile "org.apache.derby:derby:10.10.2.0"
+    compile "org.apache.derby:derby:10.7.1.1"
+    //compile "org.hibernate:hibernate-core:4.3.6.Final"
+    // https://spring.io/blog/2014/02/17/spring-data-release-train-babbage-sr3-released
+    compile "org.springframework.data:spring-data-commons:1.6.4.RELEASE"
+    compile "org.springframework.data:spring-data-jpa:1.4.4.RELEASE"
+    //compile "org.springframework-data:spring-data-releasetrain:Babbage-SR3"
+    compile "org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final"
+    compile "org.hibernate:hibernate-entitymanager:4.3.6.Final"
+    compile "org.springframework:spring-tx:4.0.6.RELEASE"
+    //compile "javax.transaction:jta:1.0.1B"
+    compile "javax.transaction:jta:1.1"
+    compile "org.jboss.logging:jboss-logging:3.1.4.GA"
+    //compile "org.hibernate:hibernate-commons-annotations:3.2.0.Final"
+    //compile "org.hibernate:hibernate-commons-annotations:4.0.1.Final"
+    compile "org.javassist:javassist:3.18.2-GA"
+    compile "dom4j:dom4j:1.6"
+    compile "org.jboss:jandex:1.2.1.Final"
+    compile "junit:junit:4.11"
+    compile "org.hamcrest:hamcrest-core:1.3" // for junit in IDEA support
+    compile "org.springframework:spring-test:4.0.6.RELEASE"
+    compile "org.springframework:spring-jdbc:4.0.6.RELEASE"
+    compile "org.springframework:spring-orm:4.0.6.RELEASE"
 }
 
 springBoot {
@@ -53,9 +76,9 @@ def springBootWarLauncherClassName = "org.springframework.boot.loader.WarLaunche
 task deploy(dependsOn: cloudBeesAppDeployArchive)
 
 cloudBees {
-    apiKey = '__apikey__'
-    apiSecret = '__apisecret__'
-    appId = '__appid__'
+    apiKey = '7CF817B4F64ED7F1'
+    apiSecret = 'SOUAHVM2CKEDZALCP5WEEGMVMC8LQCG7VA8UEPFGH3E='
+    appId = 'writepavel/usergrid'
     archiveType = 'jar'
     archiveFile = war.archivePath
     deltaDeploy = true

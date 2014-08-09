@@ -1,24 +1,37 @@
 package com.writepavel.usergrid;
 
-import java.util.Arrays;
-
+import com.writepavel.usergrid.persistence.repository.GroupsRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
+
+import java.util.Arrays;
+import java.util.Map;
+
 
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan
+// annotation @ComponentScan used for java-based server config
+//@ComponentScan
 public class Application {
 
     public static void main(String[] args) {
         // what to do with command-line args?
-        SpringApplication app = new SpringApplication(Application.class);
+        /**
+         * Creating context from java-based configuration
+         */
+        /*SpringApplication app = new SpringApplication(Application.class);
         app.setShowBanner(false);
+        */
+        /**
+         * Creating context from annotation-based configuration
+         */
+        SpringApplication app = new SpringApplication(new ClassPathResource("XMLConfig-Annotation.xml"));
+
         ApplicationContext ctx = app.run();
 
         System.out.println("Let's inspect the beans provided by Spring Boot:");
@@ -28,6 +41,14 @@ public class Application {
         for (String beanName : beanNames) {
             System.out.println(beanName);
         }
+
+        System.out.println("\n\n groupRepos: \n");
+
+        Map<String, GroupsRepository> groupRepos = ctx.getBeansOfType(com.writepavel.usergrid.persistence.repository.GroupsRepository.class);
+        for (Map.Entry<String, GroupsRepository> bean : groupRepos.entrySet()) {
+            System.out.println(bean);
+        }
+
     }
 
     @Bean
