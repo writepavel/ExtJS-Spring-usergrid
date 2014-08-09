@@ -76,8 +76,8 @@ def springBootWarLauncherClassName = "org.springframework.boot.loader.WarLaunche
 task deploy(dependsOn: cloudBeesAppDeployArchive)
 
 cloudBees {
-    apiKey = '7CF817B4F64ED7F1'
-    apiSecret = 'SOUAHVM2CKEDZALCP5WEEGMVMC8LQCG7VA8UEPFGH3E='
+    apiKey = '_KEY_'
+    apiSecret = '_SECRET_'
     appId = 'writepavel/usergrid'
     archiveType = 'jar'
     archiveFile = war.archivePath
